@@ -7,7 +7,7 @@ description: Test-driven development. Use when the user wants to build features 
 
 Every test must protect a real use case, fail for the right reason before the change, and pass because the production code now does the right thing. Work through the steps below in order, once per use case.
 
-**ALWAYS check `.ab-method/structure/index.yaml` FIRST** for where the domain docs live — paths are user-configurable. Look for it under the project root first; only if the project has none (AB Method installed as a plugin), read the bundled default at `../../../.ab-method/structure/index.yaml` relative to this `SKILL.md`. Every path the index names is relative to the project root. From there, read `CONTEXT.md` and `UBIQUITOUS_LANGUAGE.md` (if they exist) so test names match the project's domain language, the Testing section of `tech-stack.md` for the framework and conventions, and respect the ADRs in the area you're touching.
+**Read the project's own docs first**, if they exist: domain docs such as `CONTEXT.md` or a glossary so test names match the project's domain language, any testing conventions (in `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md` or similar) for the framework and conventions, and the ADRs in the area you're touching. Otherwise, follow the patterns of the existing tests.
 
 See [tests.md](tests.md) for worked examples of each step and [mocking.md](mocking.md) for where mocks belong.
 
@@ -23,7 +23,7 @@ Read the nearby tests and the relevant implementation. Extend an existing test w
 
 Test calculations directly, component interactions through the component, and critical application wiring through integration or E2E tests. Mock external boundaries only where necessary. Exercise the production code responsible for the behavior — never a copy, a stub of it, or a private helper reached around the interface.
 
-When the shape of that boundary is itself in question (how deep the module is, where the seam belongs, what the interface should expose), call the Skill tool with "codebase-design" for the vocabulary. It is a reference to consult, not a session to run.
+When the shape of that boundary is itself in question, prefer testing through the module's public interface — the interface is the test surface. If the behavior can't be reached that way without reaching into internals, that is a design signal: the seam is in the wrong place, not a reason to test the internals.
 
 ## 4. Require meaningful red, then green
 
@@ -53,4 +53,4 @@ Finish with three things stated: the behavior now protected, the evidence of red
 
 ## Autonomous runs
 
-When no user is there to confirm (`ab-start-task`, `ab-start-roadmap`, a mission subagent), the mission's objective and the grill are the source of the use case and the boundary. If the mission needs a boundary the plan never named, take the narrowest public interface that exposes the behavior and name it in the mission summary so the review stage can challenge it. The red/green evidence and verification limits from step 7 go in that summary too.
+When no user is there to confirm (a subagent, a background or headless run), the task's stated objective and any agreed plan are the source of the use case and the boundary. If the task needs a boundary the plan never named, take the narrowest public interface that exposes the behavior and name it in your final summary so a reviewer can challenge it. The red/green evidence and verification limits from step 7 go in that summary too.

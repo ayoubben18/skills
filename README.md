@@ -15,10 +15,16 @@ skills/
 
 ## Using a skill
 
-Copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` (per project).
+Install with the [skills CLI](https://github.com/vercel-labs/skills):
+
+```sh
+npx skills add ayoubben18/skills --skill tdd
+```
+
+Or copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` (per project).
 
 ## Skills
 
 | Skill | Description |
 | --- | --- |
-| [tdd](skills/tdd) | Test-driven development: use-case-driven, red → green tests. Adapted from [mattpocock/skills](https://github.com/mattpocock/skills) (MIT). |
+| [tdd](skills/tdd) | Test-driven development: use-case-driven, red → green tests. |
