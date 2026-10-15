@@ -13,15 +13,26 @@ skills/
     ...             # optional scripts, references, assets
 ```
 
-## Using a skill
+## Install
 
-Install with the [skills CLI](https://github.com/vercel-labs/skills):
+With the [skills CLI](https://skills.sh):
 
 ```sh
+# pick from a list
+npx skills add ayoubben18/skills
+
+# install one skill
 npx skills add ayoubben18/skills --skill tdd
+npx skills add ayoubben18/skills --skill challenge-tests
+
+# install everything, for every agent, no prompts
+npx skills add ayoubben18/skills --all
+
+# install globally (user-level) instead of into the current project
+npx skills add ayoubben18/skills --skill tdd -g
 ```
 
-Or copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` (per project).
+Update later with `npx skills update`. Or copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` (per project).
 
 ## Skills
 
