@@ -28,3 +28,4 @@ Or copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` 
 | Skill | Description |
 | --- | --- |
 | [tdd](skills/tdd) | Test-driven development: use-case-driven, red → green tests. |
+| [challenge-tests](skills/challenge-tests) | Audit existing tests for gaps, weak assertions, redundancy and bloat. |
