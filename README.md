@@ -19,4 +19,6 @@ Copy a skill folder into `~/.claude/skills/` (personal) or `.claude/skills/` (pe
 
 ## Skills
 
-_None yet._
+| Skill | Description |
+| --- | --- |
+| [tdd](skills/tdd) | Test-driven development: use-case-driven, red → green tests. Adapted from [mattpocock/skills](https://github.com/mattpocock/skills) (MIT). |
