@@ -24,6 +24,7 @@ npx skills add ayoubben18/skills
 # install one skill
 npx skills add ayoubben18/skills --skill tdd
 npx skills add ayoubben18/skills --skill challenge-tests
+npx skills add ayoubben18/skills --skill issue-to-pr
 
 # install everything, for every agent, no prompts
 npx skills add ayoubben18/skills --all
@@ -40,3 +41,4 @@ Update later with `npx skills update`. Or copy a skill folder into `~/.claude/sk
 | --- | --- |
 | [tdd](skills/tdd) | Test-driven development: use-case-driven, red → green tests. |
 | [challenge-tests](skills/challenge-tests) | Audit existing tests for gaps, weak assertions, redundancy and bloat. |
+| [issue-to-pr](skills/issue-to-pr) | Take an issue or idea from root cause to a green, reviewed PR, merged on approval. |
